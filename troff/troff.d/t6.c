@@ -3289,8 +3289,14 @@ caseoverrunpenalty(void)
 		if (!skip(0))
 			{
 			n = atof() ;
-			if (!nonumb && n >= 1.0 && n <= 100.0)
+			if (!nonumb)
+				{
+				if (n < 0.0)
+					n = 0.0 ;
+				if (n > 100.0)
+					n = 100.0 ;
 				overrunthreshold = n / 100.0 ;
+				}
 			}
 		if (!skip(0))
 			{

@@ -1,3 +1,7 @@
+2018-07-14
+    .overrunpenalty: do not apply a progressive penalty if overrunthreshold
+    is zero.
+
 2018-05-05
     Rename .elpchar variable to use same convention as .sentchar,
     .transchar, etc.

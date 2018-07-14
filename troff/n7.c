@@ -3032,7 +3032,7 @@ parcompSkipAdj:
 					{
 					if (v < overrunmin)
 						t += MAXPENALTY ;
-					else
+					else if (overrunthreshold >= 0.01)
 						{
 						double	lastlineratio = (double) v / nel ;
 
