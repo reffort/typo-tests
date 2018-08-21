@@ -686,8 +686,8 @@ storelsp(tchar c, int neg)
 	if ((s = getlsp(c)) != 0) {
 		if (neg)
 			s = -s;
-		lsplow += s * lspmin / LAFACT;
-		lsphigh += s * lspmax / LAFACT;
+		lsplow += (double)s * lspmin / LAFACT;
+		lsphigh += (double)s * lspmax / LAFACT;
 		lspnc += neg ? -1 : 1;
 	}
 }
@@ -713,8 +713,8 @@ storelsh(tchar c, int w)
 	}
 	if ((s = getlsh(c, w)) != 0) {
 		lshwid += s;
-		lshlow = lshwid * lshmin / LAFACT;
-		lshhigh = lshwid * lshmax / LAFACT;
+		lshlow = (double)lshwid * lshmin / LAFACT;
+		lshhigh = (double)lshwid * lshmax / LAFACT;
 	}
 }
 #endif	/* !NROFF */
