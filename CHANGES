@@ -1,3 +1,8 @@
+2018-0821
+    Avoid 32-bit int overflow with unreasonably large amounts of letter
+    adjustment, such as the 1000% found in the Heirloom Justification
+    document.  Changing LAFACT from 1000 to 10000 triggered the problem.
+
 2018-07-14
     .overrunpenalty: do not apply a progressive penalty if overrunthreshold
     is zero.
